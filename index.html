@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Asht Siddhi Balaji Diagnostic Centre | Dausa, Rajasthan</title>
 <meta name="description" content="Pathology tests and health check-up packages in Dausa. Visit Asht Siddhi Balaji Diagnostic Centre, Hospital Road, Bhatiyara Mohalla.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalBusiness","name":"Asht Siddhi Balaji Diagnostic Centre","telephone":"+917726964616","address":{"@type":"PostalAddress","streetAddress":"Hospital Road, Bhatiyara Mohalla","addressLocality":"Dausa","addressRegion":"Rajasthan","postalCode":"303303","addressCountry":"IN"}}</script>
+<meta name="theme-color" content="#06235f">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -138,6 +140,38 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0}
 .vals .ic{width:42px;height:42px;border-radius:13px;margin-bottom:.7rem}.vals .ic svg{width:21px;height:21px}
 .vals b{display:block;font-size:.9rem;color:var(--navy);line-height:1.3}.vals small{color:var(--mut);font-size:.76rem;line-height:1.35;display:block;margin-top:.2rem}
 @media (max-width:900px){.own .wrap{grid-template-columns:1fr;gap:3.2rem}.op{width:min(330px,86%)}.vals{grid-template-columns:1fr}.vals div{display:grid;grid-template-columns:auto 1fr;gap:0 .9rem;align-items:center}.vals .ic{grid-row:span 2;margin:0}}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:250px;gap:1rem}
+.g{position:relative;padding:0;border:0;border-radius:22px;overflow:hidden;cursor:zoom-in;background:var(--mist);box-shadow:0 24px 40px -28px rgba(4,22,56,.6)}
+.g.a,.g.b,.g.c{grid-row:span 2}
+.g img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.8,.2,1)}.g:hover img,.g:focus-visible img{transform:scale(1.09)}
+.g::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(4,22,56,.82));opacity:0;transition:.4s}
+.g span{position:absolute;left:1rem;right:1rem;bottom:.9rem;z-index:1;color:#fff;font-weight:600;font-size:.92rem;text-align:left;transform:translateY(12px);opacity:0;transition:.4s}
+.g:hover::after,.g:hover span,.g:focus-visible::after,.g:focus-visible span{opacity:1;transform:none}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(4,22,56,.92);backdrop-filter:blur(8px);display:none;flex-direction:column;align-items:center;justify-content:center;padding:4rem 1rem 2rem;cursor:zoom-out}
+.lb.on{display:flex;animation:fd .3s}@keyframes fd{from{opacity:0}}
+.lb img{max-width:min(960px,100%);max-height:80vh;border-radius:18px;box-shadow:0 40px 80px -20px #000}.lb p{color:#cfe3ff;margin:1rem 0 0;font-size:.95rem}
+.lb .x{position:absolute;top:calc(1rem + env(safe-area-inset-top,0px));right:1.2rem;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font-size:1.7rem;line-height:1;cursor:pointer}
+@media (max-width:900px){.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:210px}.g.c{grid-row:span 1}.g.e{grid-column:span 2}.g span,.g::after{opacity:1;transform:none}}
+/* contact + footer */
+.cwrap{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.ch{font-size:clamp(2rem,3.6vw,3rem);color:var(--navy);margin:.9rem 0 1rem}.ch em{color:var(--teal);font-style:italic}.cp{color:var(--mut);margin:0 0 1.8rem;max-width:480px}
+.cl{display:grid;gap:.9rem}.ci{display:flex;gap:1rem;align-items:center;background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:1rem 1.2rem;transition:.35s}
+.ci:hover{transform:translateX(8px);border-color:var(--teal);box-shadow:0 20px 34px -26px rgba(6,35,95,.6)}.ci:hover .ic{background:var(--navy);color:#fff}
+.ci .ic{margin:0;flex:none;width:48px;height:48px}.ci b{display:block;color:var(--navy);font-size:1.02rem}.ci small{color:var(--mut);font-size:.86rem;line-height:1.4;display:block}
+.mapc{position:relative;min-height:420px;border-radius:28px;overflow:hidden;background:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px) 0 0/44px 44px,linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px) 0 0/44px 44px,radial-gradient(circle at 50% 40%,#0d4a8f,var(--deep) 75%);box-shadow:0 36px 60px -34px rgba(4,22,56,.8)}
+.pin{position:absolute;left:50%;top:38%;width:0;height:0}.pin b{position:absolute;left:-13px;top:-13px;width:26px;height:26px;border-radius:50% 50% 50% 0;background:var(--red);transform:rotate(-45deg);box-shadow:0 8px 18px rgba(0,0,0,.4);animation:bob 2.4s ease-in-out infinite}
+.pin b::after{content:"";position:absolute;inset:8px;border-radius:50%;background:#fff}.pin i{position:absolute;left:-40px;top:-40px;width:80px;height:80px;border-radius:50%;border:2px solid rgba(20,184,176,.7);animation:rp 2.8s ease-out infinite}.pin i+i{animation-delay:1.4s}
+@keyframes rp{from{transform:scale(.3);opacity:1}to{transform:scale(2.2);opacity:0}}@keyframes bob{50%{transform:rotate(-45deg) translate(-3px,3px)}}
+.mt{position:absolute;left:1.2rem;right:1.2rem;bottom:1.2rem;background:var(--surf);border-radius:20px;padding:1.1rem 1.2rem;display:grid;gap:.25rem;color:var(--ink)}.mt strong{font-family:var(--serif);font-size:1.15rem;color:var(--navy)}.mt span{color:var(--mut);font-size:.88rem}.mt .btn{margin-top:.7rem;justify-content:center}
+.ft2{background:var(--deep);color:#b9d3dc;padding:3.5rem 0 1.5rem;font-size:.92rem}.fg{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:2.5rem}
+.fl img{height:54px;width:auto;background:#fff;border-radius:12px;padding:6px 10px;margin-bottom:1rem}.ft2 p{margin:0;max-width:320px}
+.ft2 h4{font-family:var(--serif);font-weight:500;color:#fff;font-size:1.1rem;margin:0 0 .8rem}.ft2 .fg a,.ft2 .fg>div>span{display:block;margin-bottom:.5rem}.ft2 .fg>div>a:not(.fl):hover{color:#7fe0d8}
+.fb{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space-between;border-top:1px solid rgba(255,255,255,.12);margin-top:2.4rem;padding-top:1.3rem;font-size:.8rem;color:#8ba6b4}
+.callbar{display:none}.up{position:fixed;right:1.1rem;bottom:calc(1.1rem + env(safe-area-inset-bottom,0px));width:46px;height:46px;border-radius:50%;border:0;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;font-size:1.2rem;cursor:pointer;box-shadow:0 14px 26px -12px rgba(6,35,95,.8);opacity:0;pointer-events:none;transform:translateY(12px);transition:.35s;z-index:50}.up.on{opacity:1;pointer-events:auto;transform:none}
+@media (max-width:900px){.cwrap{grid-template-columns:1fr}.mapc{min-height:360px}.fg{grid-template-columns:1fr}
+.callbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;text-align:center;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--red),#ff4b57);padding:.95rem 1rem calc(.95rem + env(safe-area-inset-bottom,0px));box-shadow:0 -10px 30px -12px rgba(0,0,0,.5)}
+.up{bottom:calc(4.6rem + env(safe-area-inset-bottom,0px))}body{padding-bottom:3.6rem}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}.hero h1 span b{transform:none}.rv,.pc li{opacity:1;transform:none}}
 </style>
 </head>
@@ -237,7 +271,35 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0}
 <a class="btn pri" href="tel:+917726964616">Talk to the centre</a>
 </div></div></section>
 
+<section class="sec" id="lab"><div class="wrap">
+<div class="sec-h rv"><span class="eyebrow">Our lab</span><h2>Step inside <em>our lab</em>.</h2><p>A look at the equipment and the space where your samples are tested. Tap any photo to view it larger.</p></div>
+<div class="gal"><button class="g a rv" style="--d:0.00s" aria-label="Open photo: Laboratory workspace"><img src="assets/lab-modern.jpg" alt="Laboratory workspace" loading="lazy"><span>Laboratory workspace</span></button><button class="g b rv" style="--d:0.08s" aria-label="Open photo: Microscopy bench"><img src="assets/lab-microscopes.jpg" alt="Microscopy bench" loading="lazy"><span>Microscopy bench</span></button><button class="g c rv" style="--d:0.16s" aria-label="Open photo: Automated haematology analyser"><img src="assets/analyzer.jpg" alt="Automated haematology analyser" loading="lazy"><span>Automated haematology analyser</span></button><button class="g d rv" style="--d:0.24s" aria-label="Open photo: Testing equipment"><img src="assets/lab-corner.jpg" alt="Testing equipment" loading="lazy"><span>Testing equipment</span></button><button class="g e rv" style="--d:0.32s" aria-label="Open photo: Find us on Hospital Road"><img src="assets/storefront.jpg" alt="Find us on Hospital Road" loading="lazy"><span>Find us on Hospital Road</span></button></div>
+</div></section>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer"><button class="x" id="lbx" aria-label="Close">×</button><img id="lbi" alt=""><p id="lbc"></p></div>
+
+<section class="sec" id="contact"><div class="wrap cwrap">
+<div class="rv">
+<span class="eyebrow">Contact</span>
+<h2 class="ch">Visit us or <em>call today</em>.</h2>
+<p class="cp">Walk in for a test or call to ask about packages. We’re happy to guide you.</p>
+<div class="cl">
+<a class="ci" href="https://maps.app.goo.gl/SeamzYALzS9ckxcE9" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5a7 7 0 0 0-14 0C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><b>Address</b><small>Hospital Road, Bhatiyara Mohalla, Dausa, Rajasthan 303303</small></div></a>
+<a class="ci" href="tel:+917726964616"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><div><b>7726964616</b><small>Tap to call</small></div></a>
+<a class="ci" href="tel:+919782373660"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><div><b>9782373660</b><small>Walk-ins welcome · call to confirm timings</small></div></a>
+</div></div>
+<div class="mapc rv" style="--d:.12s"><div class="pin"><i></i><i></i><b></b></div>
+<div class="mt"><strong>Asht Siddhi Balaji Diagnostic Centre</strong><span>Hospital Road, Bhatiyara Mohalla, Dausa</span><a class="btn pri" href="https://maps.app.goo.gl/SeamzYALzS9ckxcE9" target="_blank" rel="noopener">Get directions</a></div></div>
+</div></section>
+
 </main>
+<footer class="ft2"><div class="wrap">
+<div class="fg"><div><a href="#top" class="fl"><img src="assets/logo.png" alt="Asht Siddhi Balaji Laboratory"></a><p>Pathology tests and complete health packages in Dausa, Rajasthan.</p></div>
+<div><h4>Explore</h4><a href="#about">About</a><a href="#services">Tests</a><a href="#packages">Packages</a><a href="#owner">Owner</a><a href="#lab">Our Lab</a></div>
+<div><h4>Contact</h4><a href="tel:+917726964616">7726964616</a><a href="tel:+919782373660">9782373660</a><span>Hospital Road, Bhatiyara Mohalla, Dausa 303303</span></div></div>
+<div class="fb"><span>© 2026 Asht Siddhi Balaji Diagnostic Centre. All rights reserved.</span><span>Test results should be interpreted by a qualified doctor.</span></div>
+</div></footer>
+<a class="callbar" href="tel:+917726964616">Call now · 7726964616</a>
+<button class="up" id="up" aria-label="Back to top">↑</button>
 
 <script>
 (function(){var n=document.getElementById('nav'),m=document.getElementById('menu'),b=document.getElementById('burger');
@@ -246,6 +308,10 @@ b.addEventListener('click',function(){m.classList.toggle('open')});
 m.addEventListener('click',function(e){if(e.target.tagName==='A')m.classList.remove('open')});var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');if(e.target.querySelector('.cnt'))count(e.target.querySelector('.cnt'));io.unobserve(e.target)})},{threshold:.18}):null;
 function count(el){var to=+el.dataset.to,pre=el.dataset.pre||'',t0=null;function f(t){t0=t0||t;var p=Math.min((t-t0)/1500,1),v=Math.round(to*(1-Math.pow(1-p,3)));el.textContent=pre+v.toLocaleString('en-IN');if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
 document.querySelectorAll('.rv').forEach(function(el){io?io.observe(el):el.classList.add('in')});
+var lb=document.getElementById('lb'),lbi=document.getElementById('lbi'),lbc=document.getElementById('lbc');
+document.querySelectorAll('.g').forEach(function(g){g.addEventListener('click',function(){var im=g.querySelector('img');lbi.src=im.src;lbi.alt=im.alt;lbc.textContent=im.alt;lb.classList.add('on')})});
+function cl(){lb.classList.remove('on')}lb.addEventListener('click',cl);document.addEventListener('keydown',function(e){if(e.key==='Escape')cl()});
+var up=document.getElementById('up');window.addEventListener('scroll',function(){up.classList.toggle('on',window.scrollY>700)},{passive:true});up.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
 </script>
 </body>
