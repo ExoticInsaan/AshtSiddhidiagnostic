@@ -75,7 +75,70 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0}
 .burger{display:block}.menu{position:absolute;top:78px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--surf);border-bottom:1px solid var(--line);padding:.5rem 1.25rem 1.2rem;display:none}
 .menu.open{display:flex}.menu a{padding:.8rem 0;border-bottom:1px solid var(--line)}.menu .btn{margin-top:.8rem;justify-content:center}
 .c1{left:-.6rem}.c2{right:-.6rem}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important}.hero h1 span b{transform:none}}
+/* sections */
+.sec{padding:6rem 0}.sec-h{max-width:640px;margin-bottom:3rem}.sec-h h2,.about h2{font-size:clamp(2rem,3.6vw,3rem);color:var(--navy);margin:.9rem 0 1rem}.sec-h h2 em,.about h2 em{color:var(--teal);font-style:italic}.sec-h p{color:var(--mut);margin:0}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}.rv.in{opacity:1;transform:none}
+.about .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:4.5rem;align-items:center}
+.ph{position:relative;aspect-ratio:1/1.08}.ph::before{content:"";position:absolute;left:-18px;top:-18px;width:55%;height:55%;border-radius:28px;background:linear-gradient(135deg,var(--teal2),var(--mist));opacity:.7}
+.ph .p1{position:absolute;inset:0 16% 14% 0;border-radius:28px;overflow:hidden;box-shadow:0 36px 60px -34px rgba(4,22,56,.7)}
+.ph .p2{position:absolute;right:0;bottom:0;width:50%;aspect-ratio:1/1.1;border-radius:24px;overflow:hidden;border:6px solid var(--bg);box-shadow:0 24px 44px -24px rgba(4,22,56,.6);animation:float 6s ease-in-out infinite}
+.ph img{width:100%;height:100%;object-fit:cover}
+.about p{color:var(--mut);margin:0 0 1.1rem;max-width:540px}.about .pts{margin-top:1.6rem}
+.stats{background:radial-gradient(900px 300px at 80% -20%,rgba(20,184,176,.28),transparent),var(--deep);color:#fff;padding:3.6rem 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;text-align:center}
+.stats b{display:block;font-family:var(--serif);font-size:clamp(2.4rem,5vw,3.8rem);font-weight:500;line-height:1.1;background:linear-gradient(135deg,#fff,#8fe3dd);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stats span{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:#b9d3dc}
+.svcs{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.svc{position:relative;background:var(--surf);border:1px solid var(--line);border-radius:22px;padding:1.7rem 1.5rem;overflow:hidden;transition:transform .35s,box-shadow .35s,border-color .35s}
+.svc::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:linear-gradient(90deg,var(--teal),var(--red));transition:.5s}
+.svc:hover{transform:translateY(-8px);border-color:var(--teal);box-shadow:0 26px 40px -28px rgba(6,35,95,.6)}.svc:hover::after{width:100%}
+.ic{width:54px;height:54px;border-radius:16px;background:var(--mist);color:var(--teal);display:grid;place-items:center;margin-bottom:1.1rem;transition:.35s}
+.svc:hover .ic{background:var(--navy);color:#fff;transform:rotate(-6deg) scale(1.06)}
+.ic svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-size:1.25rem;color:var(--navy);margin-bottom:.4rem}.svc p{margin:0;color:var(--mut);font-size:.92rem;line-height:1.55}
+@media (max-width:900px){.sec{padding:4rem 0}.about .wrap{grid-template-columns:1fr;gap:3rem}.ph{max-width:420px}.svcs{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.svcs{grid-template-columns:1fr}.stats .wrap{gap:1.2rem}.stats span{font-size:.68rem;letter-spacing:.08em}}
+/* packages */
+.pk{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--deep) 0%,#0a2c6e 100%);color:#fff}
+.b3{width:520px;height:520px;background:var(--teal);opacity:.22;top:-120px;right:-160px}
+.pk .wrap{position:relative;z-index:1}.pk .sec-h h2{color:#fff}.pk .sec-h h2 em{color:#7fe0d8}.pk .sec-h p{color:#b9d3dc}.pk .eyebrow{color:#7fe0d8}.pk .eyebrow::before{background:#7fe0d8}
+.pcs{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;align-items:stretch}
+.pc{position:relative;display:flex;flex-direction:column;background:var(--surf);color:var(--ink);border-radius:24px;overflow:hidden;box-shadow:0 30px 50px -30px rgba(0,0,0,.6);transition:transform .4s,box-shadow .4s}
+.pc:hover{transform:translateY(-10px);box-shadow:0 40px 60px -28px rgba(0,0,0,.7)}
+.pc.ft{outline:2px solid var(--teal2);outline-offset:-2px;box-shadow:0 0 0 6px rgba(20,184,176,.18),0 36px 60px -28px rgba(0,0,0,.7)}
+.tag{position:absolute;top:14px;right:-34px;transform:rotate(40deg);background:linear-gradient(135deg,var(--red),#ff4b57);color:#fff;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem 2.4rem}
+.ph2{padding:1.6rem 1.4rem 1.2rem;background:linear-gradient(135deg,var(--navy2),var(--navy));color:#fff}
+.code{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8fe3dd;border:1px solid rgba(143,227,221,.45);border-radius:999px;padding:.15rem .7rem;margin-bottom:.8rem}
+.ph2 h3{font-size:1.45rem;color:#fff;margin-bottom:.3rem}.cnt2{font-size:.82rem;color:#cfe3ff}
+.pc ul{list-style:none;margin:0;padding:1.2rem 1.4rem;display:grid;gap:.55rem;flex:1}
+.pc li{position:relative;padding-left:1.5rem;font-size:.88rem;line-height:1.4;opacity:0;transform:translateX(-10px);transition:opacity .5s,transform .5s;transition-delay:calc(.3s + var(--i)*.045s)}
+.pc.in li{opacity:1;transform:none}
+.pc li::before{content:"✓";position:absolute;left:0;top:0;width:1.05rem;height:1.05rem;border-radius:50%;background:var(--mist);color:var(--teal);font-size:.68rem;font-weight:800;display:grid;place-items:center}
+.pf{padding:1.2rem 1.4rem 1.5rem;border-top:1px dashed var(--line);display:grid;gap:1rem}
+.pr small{display:block;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.pr b{font-family:var(--serif);font-size:2.5rem;font-weight:600;color:var(--navy);line-height:1.1}
+.pf .btn{justify-content:center;width:100%}
+.note{margin:2rem 0 0;font-size:.82rem;color:#9db8c6;text-align:center}
+@media (max-width:1060px){.pcs{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.pcs{grid-template-columns:1fr}.tag{right:-38px}}
+/* owner */
+.own{position:relative;overflow:hidden;background:var(--mist)}
+.wm{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--serif);font-weight:600;font-size:clamp(4rem,15vw,13rem);white-space:nowrap;color:transparent;-webkit-text-stroke:1.5px rgba(10,138,140,.16);pointer-events:none;user-select:none}
+.own .wrap{position:relative;z-index:1;display:grid;grid-template-columns:.9fr 1.1fr;gap:4.5rem;align-items:center}
+.op{position:relative;justify-self:center;width:min(420px,100%)}
+.frame{position:relative;aspect-ratio:4/5;border-radius:999px 999px 30px 30px;overflow:hidden;box-shadow:0 40px 70px -34px rgba(4,22,56,.7);border:8px solid var(--surf)}
+.frame img{width:100%;height:100%;object-fit:cover;object-position:42% 25%;transition:transform 1.2s}.op:hover .frame img{transform:scale(1.06)}
+.spin{position:absolute;inset:-26px;border:1.5px dashed var(--teal);border-radius:999px 999px 44px 44px;opacity:.5;animation:rot 40s linear infinite}
+@keyframes rot{50%{opacity:.2}}
+.oc{left:50%;bottom:-1.4rem;transform:translateX(-50%);white-space:nowrap;text-align:center;animation:none}
+.own h2{font-size:clamp(2rem,3.6vw,3rem);color:var(--navy);margin:.9rem 0 1.2rem}.own h2 em{color:var(--teal);font-style:italic}
+.own p{color:var(--mut);max-width:560px;margin:0 0 1rem}
+.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.8rem 0 2rem;max-width:560px}
+.vals div{background:var(--surf);border:1px solid var(--line);border-radius:18px;padding:1rem;transition:.35s}.vals div:hover{transform:translateY(-6px);border-color:var(--teal)}
+.vals .ic{width:42px;height:42px;border-radius:13px;margin-bottom:.7rem}.vals .ic svg{width:21px;height:21px}
+.vals b{display:block;font-size:.9rem;color:var(--navy);line-height:1.3}.vals small{color:var(--mut);font-size:.76rem;line-height:1.35;display:block;margin-top:.2rem}
+@media (max-width:900px){.own .wrap{grid-template-columns:1fr;gap:3.2rem}.op{width:min(330px,86%)}.vals{grid-template-columns:1fr}.vals div{display:grid;grid-template-columns:auto 1fr;gap:0 .9rem;align-items:center}.vals .ic{grid-row:span 2;margin:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.hero h1 span b{transform:none}.rv,.pc li{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -112,13 +175,78 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0}
 <span>Complete Blood Count</span><span>Thyroid Profile</span><span>Liver Function</span><span>Kidney Function</span><span>Lipid Profile</span><span>HbA1c</span><span>Vitamin D3</span><span>Vitamin B12</span><span>Iron Profile</span><span>CRP</span><span>Urine Routine</span>
 <span>Complete Blood Count</span><span>Thyroid Profile</span><span>Liver Function</span><span>Kidney Function</span><span>Lipid Profile</span><span>HbA1c</span><span>Vitamin D3</span><span>Vitamin B12</span><span>Iron Profile</span><span>CRP</span><span>Urine Routine</span>
 </div></div>
+<section class="sec about" id="about"><div class="wrap">
+<div class="ph rv"><div class="p1"><img src="assets/analyzer.jpg" alt="Automated haematology analyser" loading="lazy"></div><div class="p2"><img src="assets/lab-corner.jpg" alt="Testing equipment at the centre" loading="lazy"></div></div>
+<div class="rv" style="--d:.1s">
+<span class="eyebrow">About the centre</span>
+<h2>A neighbourhood lab built on <em>careful testing</em>.</h2>
+<p>Asht Siddhi Balaji Diagnostic Centre is a pathology laboratory on Hospital Road, Dausa. We run routine and advanced blood and urine tests and offer complete health-check packages at clear, honest prices.</p>
+<p>Every sample is handled with care and processed on automated analysers, so the report you carry to your doctor is one you can rely on.</p>
+<ul class="pts"><li>Clear package pricing</li><li>Automated analysers</li><li>Walk-ins welcome</li></ul>
+</div></div></section>
+
+<section class="stats"><div class="wrap">
+<div class="rv"><b><span class="cnt" data-to="4" style="font:inherit;letter-spacing:0;text-transform:none;color:inherit">0</span></b><span>Health packages</span></div>
+<div class="rv" style="--d:.1s"><b><span class="cnt" data-to="16" style="font:inherit;letter-spacing:0;text-transform:none;color:inherit">0</span></b><span>Tests in our top package</span></div>
+<div class="rv" style="--d:.2s"><b><span class="cnt" data-to="1050" data-pre="₹" style="font:inherit;letter-spacing:0;text-transform:none;color:inherit">₹0</span></b><span>Packages start at</span></div>
+</div></section>
+
+<section class="sec" id="services"><div class="wrap">
+<div class="sec-h rv"><span class="eyebrow">What we test</span><h2>Tests that cover <em>every</em> check-up.</h2><p>From a single blood count to a full-body profile, these are the tests our packages are built around.</p></div>
+<div class="svcs"><article class="svc rv" style="--d:0.00s"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div><h3>Blood &amp; Haematology</h3><p>Complete blood count and ESR for a clear picture of your blood health.</p></article><article class="svc rv" style="--d:0.07s"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 12l4-3M7.5 15.5h9"/></svg></div><h3>Diabetes Care</h3><p>Fasting glucose and HbA1c to track your sugar levels over time.</p></article><article class="svc rv" style="--d:0.14s"><div class="ic"><svg viewBox="0 0 24 24"><path d="M8.5 4C5 4 3.5 8 4.5 12s3 8 6 8 3-3.5 2.5-6 .5-3.5 2-4.5-1-5.5-6.5-5.5z"/></svg></div><h3>Liver &amp; Kidney</h3><p>Extended liver function, kidney function and eGFR in one visit.</p></article><article class="svc rv" style="--d:0.21s"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12c0-3 3-5 5-3l3 3 3-3c2-2 5 0 5 3s-3 6-8 7c-5-1-8-4-8-7z"/></svg></div><h3>Thyroid Profile</h3><p>T3, T4 and TSH to check how your thyroid is working.</p></article><article class="svc rv" style="--d:0.28s"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></div><h3>Heart &amp; Lipids</h3><p>Basic lipid profile to keep an eye on cholesterol and heart health.</p></article><article class="svc rv" style="--d:0.35s"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div><h3>Vitamins &amp; Minerals</h3><p>Vitamin D3, vitamin B12, calcium and iron profile.</p></article><article class="svc rv" style="--d:0.42s"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v9l-4.5 7.5a1 1 0 0 0 .9 1.5h11.2a1 1 0 0 0 .9-1.5L14 12V3"/><path d="M8 16h8"/></svg></div><h3>Urine Examination</h3><p>Routine urine tests that flag infections and kidney concerns early.</p></article><article class="svc rv" style="--d:0.49s"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.6"/><circle cx="18" cy="18" r="2.6"/><path d="M8 8l8 8"/></svg></div><h3>Joints &amp; Inflammation</h3><p>Quantitative CRP and RA factor for arthritis and inflammation.</p></article></div>
+</div></section>
+
+<section class="sec pk" id="packages"><div class="blob b3"></div><div class="wrap">
+<div class="sec-h rv"><span class="eyebrow">Health packages</span><h2>Check your health with <em>complete</em> packages.</h2><p>Four carefully bundled profiles, from an essential check-up to a full-body panel, at special offer prices.</p></div>
+<div class="pcs"><article class="pc rv" style="--d:0.0s">
+<div class="ph2"><span class="code">Code P782</span><h3>Swasthya Care IV</h3><span class="cnt2">10 tests included</span></div>
+<ul><li style="--i:0">ESR</li><li style="--i:1">Glucose Fasting</li><li style="--i:2">Kidney Function Test (KFT)</li><li style="--i:3">Lipid Profile Basic</li><li style="--i:4">Liver Function Test (LFT) Extended</li><li style="--i:5">Thyroid Profile (T3, T4, TSH)</li><li style="--i:6">Calcium</li><li style="--i:7">Complete Blood Count (CBC)</li><li style="--i:8">Urine Examination Routine</li><li style="--i:9">eGFR</li></ul>
+<div class="pf"><div class="pr"><small>Special offer</small><b>₹1,050</b></div><a class="btn pri" href="tel:+919782373660">Book this package</a></div>
+</article><article class="pc rv" style="--d:0.1s">
+<div class="ph2"><span class="code">Code P23</span><h3>BIOT-1 Profile</h3><span class="cnt2">11 tests included</span></div>
+<ul><li style="--i:0">Glucose Fasting</li><li style="--i:1">Liver Function Test (LFT) Extended</li><li style="--i:2">Urine Examination Routine</li><li style="--i:3">ESR</li><li style="--i:4">HbA1c</li><li style="--i:5">Lipid Profile Basic</li><li style="--i:6">Thyroid Profile (T3, T4, TSH)</li><li style="--i:7">Complete Blood Count (CBC)</li><li style="--i:8">Iron Profile Basic</li><li style="--i:9">Kidney Function Test (KFT)</li><li style="--i:10">Calcium</li></ul>
+<div class="pf"><div class="pr"><small>Special offer</small><b>₹1,500</b></div><a class="btn pri" href="tel:+919782373660">Book this package</a></div>
+</article><article class="pc rv" style="--d:0.2s">
+<div class="ph2"><span class="code">Code P778</span><h3>Swasthya Care (S)</h3><span class="cnt2">14 tests included</span></div>
+<ul><li style="--i:0">Calcium</li><li style="--i:1">Kidney Function Test (KFT)</li><li style="--i:2">Lipid Profile Basic</li><li style="--i:3">Liver Function Test (LFT) Extended</li><li style="--i:4">Thyroid Profile</li><li style="--i:5">Complete Blood Count (CBC)</li><li style="--i:6">HbA1c</li><li style="--i:7">Vitamin B12</li><li style="--i:8">Vitamin D3 25-Hydroxy</li><li style="--i:9">Urine Examination Routine</li><li style="--i:10">Glucose Fasting</li><li style="--i:11">ESR</li><li style="--i:12">Iron Profile Basic</li><li style="--i:13">eGFR</li></ul>
+<div class="pf"><div class="pr"><small>Special offer</small><b>₹3,000</b></div><a class="btn pri" href="tel:+919782373660">Book this package</a></div>
+</article><article class="pc rv ft" style="--d:0.3s"><span class="tag">Most complete</span>
+<div class="ph2"><span class="code">Code P1200</span><h3>Health Profile Advance 2</h3><span class="cnt2">16 tests included</span></div>
+<ul><li style="--i:0">HbA1c</li><li style="--i:1">Calcium</li><li style="--i:2">Iron Profile Basic</li><li style="--i:3">eGFR</li><li style="--i:4">Complete Blood Count (CBC)</li><li style="--i:5">Liver Function Test (LFT) Extended</li><li style="--i:6">Glucose Fasting</li><li style="--i:7">Vitamin B12</li><li style="--i:8">Urine Examination Routine</li><li style="--i:9">Kidney Function Test (KFT)</li><li style="--i:10">Thyroid Profile</li><li style="--i:11">Vitamin D3 25-Hydroxy</li><li style="--i:12">ESR</li><li style="--i:13">Lipid Profile Basic</li><li style="--i:14">CRP Quantitative</li><li style="--i:15">RA Factor Quantitative</li></ul>
+<div class="pf"><div class="pr"><small>Special offer</small><b>₹3,500</b></div><a class="btn pri" href="tel:+919782373660">Book this package</a></div>
+</article></div>
+<p class="note rv">Package prices and inclusions are as per the centre’s current special offer. Please confirm at the centre or by phone before booking.</p>
+</div></section>
+
+<section class="sec own" id="owner"><div class="wm" aria-hidden="true">Manish Samariya</div><div class="wrap">
+<div class="op rv">
+<div class="spin"></div>
+<div class="frame"><img src="assets/owner.jpg" alt="Manish Samariya, owner of Asht Siddhi Balaji Diagnostic Centre" loading="lazy"></div>
+<div class="card oc"><span class="dot"></span><strong>Manish Samariya</strong><br>Owner · Asht Siddhi Balaji</div>
+</div>
+<div class="rv" style="--d:.12s">
+<span class="eyebrow">Meet the owner</span>
+<h2>The person behind <em>every report</em>.</h2>
+<p>Manish Samariya leads Asht Siddhi Balaji Diagnostic Centre in Dausa and is part of the daily work at the lab, right beside the analysers. He believes a trustworthy report starts long before the machine runs: with a carefully taken sample, a patient who feels at ease, and results explained simply.</p>
+<p>Under his care the centre keeps its approach simple and honest: clear prices, complete packages and a welcome for every patient who walks in.</p>
+<div class="vals">
+<div><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span><b>Careful sampling</b><small>Gentle, hygienic collection</small></div>
+<div><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg></span><b>Honest pricing</b><small>Clear package rates</small></div>
+<div><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 10h8M8 14h5"/></svg></span><b>Reliable reports</b><small>Made for your doctor</small></div>
+</div>
+<a class="btn pri" href="tel:+917726964616">Talk to the centre</a>
+</div></div></section>
+
 </main>
 
 <script>
 (function(){var n=document.getElementById('nav'),m=document.getElementById('menu'),b=document.getElementById('burger');
 function s(){n.classList.toggle('s',window.scrollY>10)}s();window.addEventListener('scroll',s,{passive:true});
 b.addEventListener('click',function(){m.classList.toggle('open')});
-m.addEventListener('click',function(e){if(e.target.tagName==='A')m.classList.remove('open')});})();
+m.addEventListener('click',function(e){if(e.target.tagName==='A')m.classList.remove('open')});var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');if(e.target.querySelector('.cnt'))count(e.target.querySelector('.cnt'));io.unobserve(e.target)})},{threshold:.18}):null;
+function count(el){var to=+el.dataset.to,pre=el.dataset.pre||'',t0=null;function f(t){t0=t0||t;var p=Math.min((t-t0)/1500,1),v=Math.round(to*(1-Math.pow(1-p,3)));el.textContent=pre+v.toLocaleString('en-IN');if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+document.querySelectorAll('.rv').forEach(function(el){io?io.observe(el):el.classList.add('in')});
+})();
 </script>
 </body>
 </html>
